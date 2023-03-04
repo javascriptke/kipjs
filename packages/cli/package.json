@@ -1,5 +1,5 @@
 {
-  "name": "cli",
+  "name": "@kipjs/cli",
   "version": "0.0.0",
   "description": "CLI tool for kip js",
   "keywords": [
@@ -21,8 +21,6 @@
     "url": "git+https://github.com/jsmasterske/kipjs.git"
   },
   "scripts": {
-    "test": "node ./__tests__/cli.test.js",
-    "build": "tsc",
     "dev": "nodemon"
   },
   "bugs": {

@@ -1,5 +1,5 @@
 function helloCli() {
-    console.log("Hello from cli")
+  console.log('Hello from cli');
 }
 
 helloCli();
