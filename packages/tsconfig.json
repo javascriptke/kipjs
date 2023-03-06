@@ -4,6 +4,14 @@
         {
             "path": "./cli/tsconfig.json",
             "type": "project"
+        },
+        {
+            "path": "./core/tsconfig.json",
+            "type": "project"
+        },
+        {
+            "path": "./common/tsconfig.json",
+            "type": "project"
         }
     ]
 }

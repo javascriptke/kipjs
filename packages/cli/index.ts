@@ -1,4 +1,4 @@
-function helloCli() {
+function helloCli(): void {
   console.log('Hello from cli');
 }
 

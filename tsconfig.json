@@ -1,19 +1,52 @@
 {
+  "compileOnSave": false,
+  "ts-node": {
+    "transpileOnly": true,
+    "require": ["typescript-transform-paths/register"]
+  },
   "compilerOptions": {
+    "plugins": [
+      // Transform paths in output .js files
+      {
+        "transform": "typescript-transform-paths",
+        "exclude": ["**/node_modules/**"]
+      },
+      // Transform paths in output .d.ts files (Include this line if you output declarations files)
+      {
+        "transform": "typescript-transform-paths",
+        "afterDeclarations": true,
+        "exclude": ["**/node_modules/**"]
+      }
+    ],
     "module": "commonjs",
     "noImplicitAny": false,
     "noUnusedLocals": false,
     "removeComments": true,
     "noLib": false,
+    "declaration": true /* Generate .d.ts files from TypeScript and JavaScript files in your project. */,
+    // "declarationMap": true,                           /* Create sourcemaps for d.ts files. */
+    // "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "useUnknownInCatchVariables": false,
+    "types": ["node"],
+    "moduleResolution": "node",
     "target": "es2017",
     "sourceMap": true,
     "allowJs": false,
     "outDir": "dist",
     "lib": ["es7"],
     "baseUrl": ".",
+    "noImplicitOverride": true /* Ensure overriding members in derived classes are marked with an override modifier. */,
+    // "noPropertyAccessFromIndexSignature": true,       /* Enforces using indexed accessors for keys declared using an indexed type */
+    // "allowUnusedLabels": true,                        /* Disable error reporting for unused labels. */
+    // "allowUnreachableCode": true,                     /* Disable error reporting for unreachable code. */
+    /* Completeness */
+    // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+    "paths": {
+      "@kipjs/*": ["packages/*"]
+    }
   },
   "include": ["packages/**/*", "integration/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
