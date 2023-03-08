@@ -4,15 +4,64 @@
       "runner": "nx/tasks-runners/default",
       "options": {
         "cacheableOperations": [
-          "build"
+          "build",
+          "jest",
+          "jest:watch"
         ]
       }
     }
   },
   "targetDefaults": {
     "build": {
+      "dependsOn": [
+        "^build"
+      ],
       "outputs": [
         "{projectRoot}/dist"
+      ]
+    },
+    "test": {
+      "inputs": [
+        "default",
+        "^production",
+        "{workspaceRoot}/jest.preset.js",
+        "{workspaceRoot}/jest.config.ts"
+      ],
+      "dependsOn": [
+        "build"
+      ]
+    },
+    "run-e2e-tests": {
+      "inputs": [
+        "default",
+        "^production",
+        "{workspaceRoot}/jest.preset.js",
+        "{workspaceRoot}/jest.config.ts"
+      ],
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "{projectRoot}/jest.config.ts",
+        "passWithNoTests": true,
+        "runInBand": true
+      },
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ]
+    },
+    "jest": {
+      "dependsOn": [
+        "^jest"
+      ],
+      "outputs": [
+        "{projectRoot}/coverage"
+      ]
+    },
+    "jest:watch": {
+      "dependsOn": [
+        "^jest:watch"
+      ],
+      "outputs": [
+        "{projectRoot}/coverage"
       ]
     }
   }

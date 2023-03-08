@@ -1,5 +1,5 @@
-function helloCore() {
-  console.log('Hello from core');
+export default function helloCore() {
+  return 'Hello from core';
 }
 
 helloCore();

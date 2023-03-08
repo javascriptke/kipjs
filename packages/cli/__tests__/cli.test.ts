@@ -1,5 +1,7 @@
-const assert = require('assert').strict;
-const cli = require('..');
+import cli from '..';
 
-assert.strictEqual(cli(), 'Hello from cli');
-console.info('cli tests passed');
+describe('cli', () => {
+  it('should work', () => {
+    expect(cli()).toEqual('Hello from cli');
+  });
+});

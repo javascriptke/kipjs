@@ -1,5 +1,5 @@
-function helloCommon() {
-  console.log('Hello from common');
+export default function helloCommon() {
+  return 'Hello from common';
 }
 
 helloCommon();

@@ -22,9 +22,13 @@
   },
   "scripts": {
     "dev": "nodemon",
-    "build": "tsc"
+    "build": "tsc",
+    "jest": "jest --coverage --verbose",
+    "jest:watch": "jest --watch --coverage --verbose"
   },
   "bugs": {
     "url": "https://github.com/jsmasterske/kipjs/issues"
+  },
+  "dependencies": { 
   }
 }

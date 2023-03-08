@@ -29,7 +29,10 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "useUnknownInCatchVariables": false,
-    "types": ["node"],
+    "types": [
+      "node",
+      "jest"
+    ],
     "moduleResolution": "node",
     "target": "es2017",
     "sourceMap": true,
@@ -44,10 +47,17 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+    "typeRoots": [
+      "./node_modules/@types",
+      "packages/**/@types"
+    ],
     "paths": {
-      "@kipjs/*": ["packages/*"]
+      "@kipjs/*": ["packages/*"],
+      "@kipjs/cli": ["packages/cli/*"],
+      "@kipjs/common": ["packages/common/*"],
+      "@kipjs/core": ["packages/core/*"],
     }
   },
   "include": ["packages/**/*", "integration/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "exclude": ["node_modules", "**/*.spec.ts" ]
 }

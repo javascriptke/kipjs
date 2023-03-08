@@ -21,7 +21,9 @@
     "url": "git+https://github.com/jsmasterske/kipjs.git"
   },
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "jest": "jest --coverage --verbose",
+    "jest:watch": "jest --watch --coverage --verbose"
   },
   "bugs": {
     "url": "https://github.com/jsmasterske/kipjs/issues"

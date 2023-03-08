@@ -1,5 +1,7 @@
-const assert = require('assert').strict;
-const common = require('..');
+import common from '..';
 
-assert.strictEqual(common(), 'Hello from common');
-console.info('common tests passed');
+describe('common', () => {
+  it('should work', () => {
+    expect(common()).toEqual('Hello from common');
+  });
+});

@@ -1,5 +1,7 @@
-const assert = require('assert').strict;
-const core = require('..');
+import core from '..';
 
-assert.strictEqual(core(), 'Hello from core');
-console.info('core tests passed');
+describe('core', () => {
+  it('should work', () => {
+    expect(core()).toEqual('Hello from core');
+  });
+});
