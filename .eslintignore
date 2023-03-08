@@ -3,3 +3,4 @@
 *.js
 tools
 jest.config.ts
+packages/**/

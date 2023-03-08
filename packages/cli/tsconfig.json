@@ -3,7 +3,9 @@
   "compilerOptions": {
     "types": [
       "node"
-    ]
+    ],
+    "esModuleInterop": true,
+    "resolveJsonModule": true
   },
   "files": [],
   "include": [],

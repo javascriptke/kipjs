@@ -17,7 +17,9 @@
       "allowJs": false,
       "strict": true,
       "strictNullChecks": false,
-      "types": ["node", "jest"]
+      "types": ["node", "jest"],
+      "resolveJsonModule": true,
+      "esModuleInterop": true
     }
   }
   
